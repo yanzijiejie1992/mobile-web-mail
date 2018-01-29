@@ -1,0 +1,307 @@
+body{
+    background: #e7e7e7;
+}
+@media screen and (max-device-width: 640px) {
+    　　　　.column {
+        float: none;  width: auto;
+    }
+}
+.layout{
+    width:100%;
+    margin:0 auto;
+    min-width: 300px;
+    max-width:640px;
+    position: relative;
+}
+header{
+    top:0;
+    left:0;
+    z-index: 999;
+    width:100%;
+
+}
+.header_box{
+    height:100px;
+    background:rgb(167,203,42);
+    position: relative;
+    min-width: 300px;
+    max-width: 640px;
+}
+header .header_box .left{
+    display: block;
+    position: absolute;
+    left:10px;
+    width: 163px;
+    height:100px;
+    line-height:100px;
+    color: #fff;
+    font-size: 22px;
+}
+span.icon_location{
+    display: block;
+    width:15px;
+    height:15px;
+    background-position: -180px -10px;
+    position: absolute;
+    left:50px;
+    top:46px;
+}
+form{
+    width:100%;
+    padding-left:85px;
+    padding-right:100px;
+    height:100px;
+    position: relative;
+}
+input{
+    width:100%;
+    border-radius: 10px;
+    height:50px;
+    margin-top: 25px;
+    background:rgb(167,203,42);
+    border: 2px solid #fff !important;
+    padding-left: 40px;
+    z-index:1000;
+}
+.header_box form .icon_search{
+    background-position: -60px -109px;
+    display: block;
+    position: absolute;
+    left:100px;
+    top:40px;
+    width: 30px;
+    height:30px;
+}
+.header_box .chat{
+    position: absolute;
+    right:0;
+    top:0;
+    width:100px;
+    height:108px;
+
+}
+.header_box .chat img{
+    width:90%;
+    height:85%;
+    position: absolute;
+    right:0;
+}
+header .carousel {
+    width:100%;
+    overflow: hidden;
+    position: relative;
+}
+header .carousel ul:first-child{
+    width:400%;
+}
+header .carousel ul:first-child li{
+    float: left;
+    width:25%;
+}
+header .carousel ul:first-child li img{
+    width:100%;
+    display: block;
+}
+header .carousel ol{
+    width:90px;
+    height:15px;
+    position: absolute;
+    right:120px;
+    bottom:10px;
+    list-style: none;
+}
+header .carousel ol li{
+    width:15px;
+    height:15px;
+    line-height:15px;
+    border-radius: 50%;
+    float: left;
+    margin-left: 10px;
+    background-color: #fbf9f5;
+    text-align: center;
+    font-size: 12px;
+}
+header .carousel ol li.current{
+    background-color: pink;
+}
+header .carousel ol li:first-child{
+    margin-left: 0;
+}
+header .carousel .arrow-l, .arrow-r {
+    position: absolute;
+    width: 28px;
+    height: 62px;
+    top: 50%;
+    margin-top: -31px;
+    color: #fff;
+    font: 500 18px/62px "宋体";
+    text-align: center;
+    background: rgba(0,0,0,.2);
+}
+.arrow-l {
+    left: 0;
+}
+.arrow-r {
+    right: 0;
+}
+.nav{
+    width:100%;
+    margin-bottom:15px;
+
+}
+.nav .top{
+    width:100%;
+    position: relative;
+    border-bottom:2px solid #e7e7e7;
+    background-color: #fff;
+    box-sizing: content-box;
+}
+.nav .top .left{
+    float: left;
+    width:55%;
+}
+.nav .top .left .logo{
+    width:23%;
+    float: left;
+    position: relative;
+}
+.nav .top .left .logo img{
+    width:100%;
+   margin-top:15px ;
+}
+.nav .top .left p{
+    font-size: 16px;
+    margin-top:35px;
+    color: #666666;
+    display: block;
+    float: left;
+    width:38%;
+}
+.nav .top .left  span
+{
+    display: block;
+    font-size: 16px;
+    color: red;
+    float: left;;
+    width:30%;
+    margin-top:35px;
+}
+.nav .top .right{
+    position: absolute;
+    right:10px;
+    width:43%;
+}
+.nav .top .right span{
+    display: block;
+    font-size: 16px;
+    color: red;
+    float: right;
+    margin-top:35px;
+}
+.nav .top .right p{
+    float: right;
+    font-size: 16px;
+    color: #666666;
+    width:40%;
+    margin-top:35px;
+
+}
+.nav .bottom{
+    width:100%;
+    background-color: #fff
+}
+.nav .bottom ul{
+    width:100%;
+
+}
+.nav .bottom ul li{
+    padding-top: 20px;
+    float: left;
+    width:25%;
+    text-align: center;
+}
+.nav .bottom ul li img{
+    width:100%;
+}
+.nav .bottom ul li p{
+    margin: 20px 0;
+    font-size: 18px;
+    color: #666;
+}
+.banner{
+    width: 100%;
+    position: relative;
+}
+.banner  .ban img{
+    width:100%;
+    display: block;
+}
+.banner .ban{
+    float: left;
+    background-color: #FFF;
+    width:50%;
+}
+.banner .ban1,
+.banner .ban3{
+border-right: 3px solid #e7e7e7;
+}
+
+.banner .ban3,
+.banner .ban4{
+    margin-top: 2px;
+}
+.banner h3{
+    color: #666;
+    font-size:25px;
+    margin: 22px 0 15px 50px;
+    font-weight:100;
+}
+.banner p{
+    font-size: 18px;
+    color: #999999;
+    margin-left: 50px;
+    margin-bottom: 20px;
+    font-weight:none;
+}
+.footer{
+    min-width: 300px;
+    max-width: 1026px;
+    height:160px;
+    background-color: #FFF;
+    margin-top: 3px;
+}
+.footer ul{
+    width:100%;
+    min-width: 300px;
+    max-width: 1026px;
+}
+.footer ul li{
+    width:25%;
+    height:150px;
+    float: left;
+  /*  margin:20px 138px 25px 40px;*/
+
+}
+.footer ul li a{
+    display: block;
+    width:100%;
+    height:100%;  text-align: center;
+    padding-top: 15px;
+}
+.footer ul li.last{
+ /*   margin-right: 40px;*/
+}
+.footer ul li img{
+    width:60px;
+    height:60px;
+    display: block;
+    margin:0 auto;
+}
+
+.footer ul li span{
+    display: block;
+    font-size: 18px;
+    height:30px;
+    line-height:30px;
+    color: #666666;
+}

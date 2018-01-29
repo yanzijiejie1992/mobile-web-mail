@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="css/main.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="js/setHomeSetFav.js"></script>
+    <script type="text/javascript" src="js/myfocus-2.0.1.min.js" charset="utf-8"></script><!--引入myFocus库-->
+    <script>
+        myFocus.set({
+            id:'boxID',
+        });
+    </script>
+<style>
+    *{
+        margin:0;
+        padding:0;
+    font-size: 12px}
+    body {
+        background-color: #F5F5F5;
+    }
+    .top{
+        width:100%;
+        height:30px;
+        background:url("images/top_bg.jpg") repeat-x;
+    }
+    .top_content{
+        width:1000px;
+        margin:0 auto;
+        height:30px;
+    }
+    .top_content li{
+        list-style-image: url("images/li_bg.gif") ;
+        float: right;
+        font-size: 12px;
+        width:80px;
+        line-height:30px;
+    }
+    .top_content li a{
+        text-decoration: none;
+    }
+    .Wrap{
+        margin:0 auto;
+        width:1000px ;
+
+    }
+    .logo{
+        height:80px;
+        background-color: #fff;
+    }
+    .logo .logo_left{
+        height: 80px;
+        float: left;
+        width:80px;
+    }
+    .logo .logo_right{
+        float: right;
+        margin-top: 40px;
+        color: #8E8E8E;
+    }
+    .logo .logo_right img{
+        vertical-align: middle;
+        margin-right: 12px;
+    }
+    .logo .logo_right .tel{
+        display: inline-block;
+        font-family: "微软雅黑";
+        font-size: 22px;
+        color: #C00;
+    }
+    .nav{
+        height:40px;
+        background: url("images/nav_bg.jpg") repeat-x;
+        border-radius:5px;
+    }
+    .nav .nav_left{
+
+        float: left;
+
+        width:680px;
+    }
+    .nav .nav_left ul{
+        margin-left: 40px;
+    }
+    .nav .nav_left li{
+        float: left;
+        list-style: none;
+        margin-right: 30px;
+        line-height:40px;
+        font-size: 15px;
+        color: #fff;
+    }
+    .nav .nav_right{
+        width:300px;
+        height:40px;
+        float: right;
+
+    }
+    .search_text {
+        width: 190px;
+        float: left;
+        height: 25px;
+        margin-top: 5px;
+        background: url(images/search.jpg) no-repeat  right center;
+        background-color: #FFF;
+        border: 1px solid #FFF;
+        padding-right: 25px;
+    }
+    .ad{
+        height:320px;
+        overflow: hidden;
+        
+    }
+    .ad li{
+        list-style: none;
+        float: left;
+    }
+    .main{
+
+        height:250px;
+        background-color: #FFFFFF;
+        margin-top: 5px;
+    }
+    .news{
+        width:340px;
+        border:1px solid #8E8E8E;
+    }
+    .course{
+        width:410px;
+        margin:0 7px;
+        border:1px solid #8E8E8E;
+    }
+    .sidebar{
+        width:230px;
+    }
+    .news,.course,.slidebar{
+        float: left;
+        height:250px;
+        /*display: inline;*/
+    }
+    .title{
+        border:2px solid #E8E8E8;
+        height:35px;
+    }
+    .title_left{
+        width:70%;
+        font-size: 12px;
+        font-family:"微软雅黑";
+        color: #786f66;
+        float: left;
+        line-height:35px;
+        padding-left:20px;
+    }
+    .title_right{
+
+        float: right;
+        line-height:35px;
+        text-decoration: none;
+         font-size: 10px;
+        color: #999;
+        padding-right: 10px;
+        font-family: "宋体";
+    }
+</style>
+</head>
+
+<body>
+<div class="top">
+    <div class="top_content">
+        <ul>
+            <li><a href="">联系我们</a></li>
+            <li><a href="">设为收藏</a></li>
+            <li><a href="">加入首页</a></li>
+        </ul>
+    </div>
+</div>
+    <div class="Wrap">
+        <div class="logo">
+            <div class="logo_left"><img src="images/logo.jpg" alt=""></div>
+            <div class="logo_right"><img src="images/tel.jpg" alt="">24小时服务热线：<div class="tel">123-455-7890</div></div>
+        </div>
+        <div class="nav">
+            <div class="nav_left">
+                <ul>
+                    <li>首页</li>
+                    <li>关于慕课</li>
+                    <li>新闻动态</li>
+                    <li>课程中心</li>
+                    <li>在线课程</li>
+                    <li>人才招聘</li>
+                </ul>
+            </div>
+            <div class="nav_right">
+                <form action="" method="post">
+                    <input type="text" class="search_text">
+                </form>
+            </div>
+        </div>
+        <div class="ad" id="boxID">
+            <div class="loading"><img src="images/loading.gif" alt="请稍候..." /></div>
+            <div class="pic">
+                <ul>
+                    <li><a href="#"><img src="images/ad2.jpg" thumb="" alt="" text="详细描述2" /></a></li>
+                    <li><a href="#"><img src="images/ad3.jpg" thumb="" alt="" text="详细描述3" /></a></li>
+                    <li><a href="#"><img src="images/ad4.jpg" thumb="" alt="" text="详细描述4" /></a></li>
+                    <li><a href="#"><img src="images/ad3.jpg" thumb="" alt="" text="详细描述5" /></a></li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="main">
+            <div class="news">
+                <div class="title">
+                    <h2 class="title_left">新闻中心</h2>  <a href="news.html" class="title_right">More&gt;&gt;</a>
+                </div>
+                <div class="pic_news"> <img src="images/news.jpg" alt="520 慕女神喊你来表白" width="113" height="77" />
+                    <h2><a href="news.html">520 慕女神喊你来表白！</a></h2>
+                    <p>活动时间：5月20日―5月25日<br />
+                        获奖公布时间：5月26日<br />
+                        <a href="news.html">Learn More&gt;&gt;</a></p>
+                </div>
+                <div class="news_list">
+                    <ul>
+                        <li><span>2014-06-01</span> <a href="news.html">【慕客访谈 用户篇】“有为�潘俊痹诼飞�</a></li>
+                        <li><span>2014-06-01</span><a href="news.html">【有奖活动】给父亲的三行书信</a></li>
+                        <li><span>2014-05-30</span><a href="news.html">《程序猿，请晒出你的童年》活动获奖公告</a></li>
+                        <li><span>2014-05-28</span><a href="news.html" title="aa">【慕课访谈】破茧成蝶――美女程序员的蜕变史</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="course">
+                <div class="title">
+                    <h2 class="title_left">新闻中心</h2>  <a href="news.html" class="title_right">More&gt;&gt;</a>
+                </div>
+                <div class="product_list">
+                    <img src="images/css.jpg" alt=""><h2><a href="news.html">CSS圆角进化论</a></h2>
+                    <p> CSS圆角的实现，经历了三大发展阶段：背景图片方式、CSS2.0+HTML标签模拟、CSS3.0圆角属性）。本案例详细讲解每一种的实现方式，并对实现的优缺点进行对比分析。</p>
+                </div>
+                <div class="product_type">
+                    <ul>
+                        <li>PHP开发</li>
+                        <li>前端开发</li>
+                        <li>JAVA开发</li>
+                        <li>Android开发</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="sidebar">
+                <div class="video">
+                    <div class="title"><h2 class="title_left">媒体查询</h2>
+                        <a href="" class="title_right">More&gt;&gt;</a>
+                    </div>
+                    <div class="video_content">
+                        <embed src="http://player.youku.com/player.php/sid/XNjkzMDE5MTUy/v.swf" allowFullScreen="true" quality="high" width="220" height="140" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash"></embed>
+                    </div>
+                </div>
+                <div class="sidebar_ad"><img src="images/app.jpg" /></div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="css/mall.css">
+    <link rel="stylesheet" href="css/mall_base.css">
+    <!--<link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">-->
+
+    <title>商城</title>
+</head>
+<body>
+<div class="layout">
+    <header>
+        <div class="header_box">
+            <a href="" class="left">定位 <span class="icon_location"></span></a>
+            <form action=""><input type="search"><span class="icon_search"></span></form>
+            <div class="chat"><img src="images/weixin.jpg" alt=""></div>
+        </div>
+        <div class="carousel" id="mian_id" >
+            <ul class="carousel_inner">
+                <li class="item active"><img src="images/l1.jpg" alt=""></li>
+                <li class="item"><img src="images/l2.jpg." alt=""></li>
+                <li class="item"><img src="images/l3.jpg" alt=""></li>
+                <li class="item"><img src="images/l4.jpg" alt=""></li>
+            </ul>
+            <ol>
+                <li class="current">1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+            </ol>
+            <div class="arrow" id="arr">   <!--左右两个三角-->
+                <a href="#main_ad" class="arrow-l" role="button" data-slide="prev"><</a>
+                <a href="#main_ad" class="arrow-r" role="button" data-slide="next">></a>
+            </div>
+        </div>
+    </header>
+    <div class="nav ">
+        <div class="top clearfix">
+            <div class="left">
+                <div class="logo">
+                    <img src="images/voice_ad.jpg" alt="">
+                </div>
+                <p>黑科技云电视新上</p>
+                <span>￥5000.00</span>
+            </div>
+            <div class="right">
+                <span>￥2000.00</span>
+                <p>轻奢包包</p>
+
+            </div>
+        </div>
+        <div class="bottom clearfix">
+            <ul>
+                <li><a href=""><img src="images/nav1.jpg" alt=""><p>合作商家</p></a></li>
+                <li><a href=""><img src="images/nav2.jpg" alt=""><p>优惠券</p></a></li>
+                <li><a href=""><img src="images/nav3.jpg" alt=""><p>抢购</p></a></li>
+                <li><a href=""><img src="images/nav4.jpg" alt=""><p>分类</p></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="banner clearfix">
+        <div class="ban ban1"><a href=""><h3>大米</h3><p>纯天然无污染大米，来自明月山</p><img src="images/ban1.jpg" alt=""></a></div>
+        <div class="ban ban2"><a href=""><h3>酒水</h3><p>天然酝酿，恒久品牌</p><img src="images/ban3.jpg" alt=""></a></div>
+        <div class="ban ban3"><a href=""><h3>茶叶</h3><p>来自山里的好料，喝过就知道</p><img src="images/ban2.jpg" alt=""></a></div>
+        <div class="ban ban4"><a href=""><h3>水果</h3><p>纯天然无污染，大自然恩赐</p><img src="images/ban4.jpg" alt=""></a></div>
+
+    </div>
+    <div class="clearfix"></div>
+    <div class="footer">
+        <ul>
+            <li><a href=""><img src="images/fot.jpg" alt=""><span>商场</span></a></li>
+            <li><a href=""><img src="images/fot1.jpg" alt=""><span>首页</span></a></li>
+            <li><a href=""><img src="images/fot2.jpg" alt=""><span>晒单</span></a></li>
+            <li class="last"><a href=""><img   src="images/fot3.jpg" alt=""><span>个人中心</span></a></li>
+        </ul>
+    </div>
+</div>
+
+</body>
+</html>
+<!--<script type="text/javascript" src="js/main.js"></script>-->
+<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+<script src="lib/bootstrap/js/bootstrap.js"></script>
+
+<script type="text/javascript">
+    $(function() {
+        // 当文档加载完成才会执行
+        /**
+         * 根据屏幕宽度的变化决定轮播图片应该展示什么
+         * @return {[type]} [description]
+         */
+     /*   function resize() {
+            // 获取屏幕宽度
+            var windowWidth = $(window).width();
+            // 判断屏幕属于大还是小
+            var isSmallScreen = windowWidth < 768;
+            // 根据大小为界面上的每一张轮播图设置背景
+            // $('#main_ad > .carousel-inner > .item') // 获取到的是一个DOM数组（多个元素）
+            $('#main_ad > .carousel-inner > .item').each(function(i, item) {
+                // 因为拿到是DOM对象 需要转换
+                var $item = $(item);
+                // var imgSrc = $item.data(isSmallScreen ? 'image-xs' : 'image-lg');
+                var imgSrc =
+                        isSmallScreen ? $item.data('image-xs') : $item.data('image-lg');
+
+                // 设置背景图片
+                $item.css('backgroundImage', 'url("' + imgSrc + '")');
+                //
+                // 因为我们需要小图时 尺寸等比例变化，所以小图时我们使用img方式
+                if (isSmallScreen) {
+                    $item.html('<img src="' + imgSrc + '" alt="" />');
+                } else {
+                    $item.empty();
+                }
+            });
+        }
+
+        $(window).on('resize', resize).trigger('resize');
+
+        // 初始化tooltips插件
+
+        /!**
+         * 控制标签页的标签容器宽度
+         *!/
+        var $ulContainer = $('.nav-tabs');
+        // 获取所有子元素的宽度和
+        var width = 30; // 因为原本ul上有padding-left
+        // 遍历子元素
+        $ulContainer.children().each(function(index, element) {
+            // console.log(element.clientWidth);
+            // console.log($(element).width());
+            width += element.clientWidth;
+        });
+        // 此时width等于所有LI的宽度总和
+        // 判断当前UL的宽度是否超出屏幕，如果超出就显示横向滚动条
+        if (width > $(window).width()) {
+
+            $ulContainer
+                    .css('width', width)
+                    .parent().css('overflow-x', 'scroll');
+        }
+
+        // a点击注册事件
+        var $newTitle = $('.news-title');
+        $('#news .nav-pills a').on('click', function() {
+            // 获取当前点击元素
+            var $this = $(this);
+            // 获取对应的title值
+            var title = $this.data('title');
+            // 将title设置到相应的位置
+            $newTitle.text(title);
+        });*/
+
+        // 1. 获取手指在轮播图元素上的一个滑动方向（左右）
+
+
+
+        // 获取界面上的轮播图容器
+        var $carousels = $('.carousel');
+        var startX, endX;
+        var offset = 50;
+
+        // 注册滑动事件
+        $carousels.on('touchstart', function(e) {
+            // 手指触摸开始时记录一下手指所在的坐标X
+            startX = e.originalEvent.touches[0].clientX;
+            // console.log(startX);
+        });
+
+        $carousels.on('touchmove', function(e) {
+            // 变量重复赋值
+            endX = e.originalEvent.touches[0].clientX;
+            // console.log(endX);
+        });
+        $carousels.on('touchend', function(e) {
+            console.log(e);
+            // 结束触摸一瞬间记录最后的手指所在坐标X
+            // 比大小
+            // console.log(endX);
+            // 控制精度
+            // 获取每次运动的距离，当距离大于一定值时认为是有方向变化
+            var distance = Math.abs(startX - endX);
+            if (distance > offset) {
+                // 有方向变化
+                // console.log(startX > endX ? '←' : '→');
+                // 2. 根据获得到的方向选择上一张或者下一张
+                //     - $('a').click();
+                //     - 原生的carousel方法实现 http://v3.bootcss.com/javascript/#carousel-methods
+               /* alert(startX > endX ? 'next' : 'prev')*/
+                aa = startX > endX ? next($(this)) : prev($(this))
+            }
+        });
+        function next($this){
+            if($(".active").next().length == 1){
+                $(".active").removeClass("active").next().addClass("active");
+//                $(".item").eq($(".active").index()).fadeIn("fast").siblings().fadeOut();
+
+
+            }else{
+                /*console.log($(".active").siblings())*/
+                $(".active").removeClass("active").siblings().eq(0).addClass("active");
+
+            }
+            $(".item").fadeOut()
+            $(".active").fadeIn("fast")
+            $(function () {
+                $(".carousel ol li ").eq($(".active").index()).addClass("current").siblings().removeClass("current");
+            })
+
+        }
+        function prev($this){
+            if($(".active").prev().length == 1){
+                $(".active").removeClass("active").prev().addClass("active");
+//                $(".item").eq($(".active").index()).fadeIn("fast").siblings().fadeOut();
+
+
+            }else{
+                /*console.log($(".active").siblings())*/
+                $(".active").removeClass("active").siblings().eq(2).addClass("active");
+
+            }
+            $(".item").fadeOut()
+            $(".active").fadeIn("fast")
+
+            $(function () {
+                $(".carousel ol li ").eq($(".active").index()).addClass("current").siblings().removeClass("current");
+            })
+        }
+
+    });
+
+</script>
